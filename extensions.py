@@ -7,7 +7,7 @@ class ConvertionExeption(Exception):
     pass
 
 
-class get_price:
+class Get_Price:
     @staticmethod
     def convert(quote: str, base: str, amount: str):
         if quote == base:
