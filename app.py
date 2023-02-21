@@ -2,7 +2,7 @@ import telebot
 import requests
 from bs4 import BeautifulSoup
 from config import TOKEN, keys
-from extensions import get_price, ConvertionExeption
+from extensions import Get_Price, ConvertionExeption
 from telebot import types
 
 bot = telebot.TeleBot(TOKEN)
@@ -46,7 +46,7 @@ def convert(message: telebot.types.Message):
             if len(values) != 3:
                 raise ConvertionExeption('Вы ввели неправильное количество параметров')
             quote, base, amount = values
-            total_base = get_price.convert(quote, base, amount)
+            total_base = Get_Price.convert(quote, base, amount)
         except ConvertionExeption as e:
             bot.reply_to(message, f'Ошибка пользователя\n{e}')
         except Exception as e:
