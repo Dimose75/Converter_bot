@@ -2,7 +2,7 @@ import telebot
 import requests
 from bs4 import BeautifulSoup
 from config import TOKEN, keys
-from utils import CryptoConverter, ConvertionExeption
+from extensions import CryptoConverter, ConvertionExeption
 from telebot import types
 
 bot = telebot.TeleBot(TOKEN)
